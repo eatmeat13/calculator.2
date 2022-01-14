@@ -32,6 +32,10 @@ public class solution {
         String[] blacks = under_charString.split("[+-/*]");
         String stable00 = blacks[0].trim();
         String stable01 = blacks[1].trim();
+        if (blacks.length >2) {
+            System.out.println("Ошибка");
+            return;
+        }
         number1 = voll.romanToNumber(stable00);
         number2 = voll.romanToNumber(stable01);
 
@@ -53,7 +57,7 @@ public class solution {
             result = voll.calculated(number1, number2, operation);
             System.out.println("Результат для римских цифр:");
             if (result < 0) {
-                throw new RuntimeException("Римские числа не могут быть отрицательными");
+               throw new RuntimeException("Римские числа не могут быть отрицательными");
 
 
             }
