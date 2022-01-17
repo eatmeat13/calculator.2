@@ -12,7 +12,7 @@ public class solution {
     public static void main(String[] args) {
         System.out.println("Введите выражение ");
         String userInput = scanner.nextLine();
-        char[] under_char = new char[5];
+        char[] under_char = new char[10];
         for (int i = 0; i < userInput.length(); i++) {
             under_char[i] = userInput.charAt(i);
             if (under_char[i] == '+') {
@@ -38,7 +38,6 @@ public class solution {
         }
         number1 = voll.romanToNumber(stable00);
         number2 = voll.romanToNumber(stable01);
-
         if (number1 < 0 && number2 < 0) {
             number1 = Integer.parseInt(stable00);
             number2 = Integer.parseInt(stable01);
